@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit-Converter</title>
+</head>
+<body>
+    <h1>Unit-Converter</h1>
+    <input type="number" id="input1">
+    <button id="submit1">Submit</button>
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <script>
+        const inp1=document.getElementById("input1");
+        const smt1=document.getElementById("submit1");
+        const res1=document.getElementById("result1");
+        const res2=document.getElementById("result2");
+
+        smt1.onclick=function(){
+            const value1=Number(inp1.value);
+            const result1=(value1)/1.609;
+            const result2=value1*1.609; 
+            res1.textContent=`Km to Miles: ${result1}`;
+            res2.textContent=`Miles to Km: ${result2}`;
+        }
+    </script>
+</body>
+</html>
