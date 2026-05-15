@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense tracker</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Item name:</td>
+            <td><input id="item1" type="text"></td>
+        </tr>
+        <tr>
+            <td>Expense:</td>
+            <td><input id="expense1" type="number"></td>
+        </tr>
+    </table>
+    <button id="button1">Submit</button>
+    <p>Total Expense: <span id="text1"></span></p>
+    <script>
+        const itm1 = document.getElementById("item1");
+        const exp1 = document.getElementById("expense1");
+        const btn1 = document.getElementById("button1");
+        const txt1 = document.getElementById("text1");
+        let expense1 = 0;
+        
+        btn1.onclick = function handle1(){
+            const tmp1 = Number(exp1.value);
+            expense1 += tmp1;
+            txt1.textContent = expense1.toString();
+        }
+    </script>
+</body>
+</html>
